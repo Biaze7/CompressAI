@@ -188,8 +188,7 @@ def _encode(image, model, metric, quality, coder, output):
     )
 
 
-#def _decode(inputpath, coder, show, output=None):
-def _decode(inputpath, coder, show, output):
+def _decode(inputpath, coder, show, output=None):
     compressai.set_entropy_coder(coder)
 
     dec_start = time.time()
@@ -218,8 +217,7 @@ def _decode(inputpath, coder, show, output):
 
     if show:
         show_image(img)
-    #if output is not None:
-    if output is None:
+    if output is not None:
         img.save(output)
 
 
