@@ -217,7 +217,8 @@ def _decode(inputpath, coder, show, output=None):
 
     if show:
         show_image(img)
-    if output is not None:
+    #if output is not None:
+    if output is None:
         img.save(output)
 
 
